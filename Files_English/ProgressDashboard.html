@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Progress Dashboard Enhanced</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 backdrop-blur-sm">
+<button class="flex size-10 shrink-0 items-center justify-center text-slate-800 dark:text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-white">Progress Dashboard</h1>
+<div class="size-10 shrink-0"></div>
+</div>
+<div class="flex-1 space-y-6 p-4">
+<div class="flex h-10 w-full items-center justify-center rounded-lg bg-slate-200 dark:bg-[#233348] p-1">
+<label class="flex h-full flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg px-2 text-sm font-medium leading-normal text-slate-500 dark:text-[#92a9c9] has-[:checked]:bg-white has-[:checked]:text-slate-900 has-[:checked]:shadow-sm dark:has-[:checked]:bg-[#111822] dark:has-[:checked]:text-white">
+<span class="truncate">7D</span>
+<input class="invisible w-0" name="time-filter" type="radio" value="7D"/>
+</label>
+<label class="flex h-full flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg px-2 text-sm font-medium leading-normal text-slate-500 dark:text-[#92a9c9] has-[:checked]:bg-white has-[:checked]:text-slate-900 has-[:checked]:shadow-sm dark:has-[:checked]:bg-[#111822] dark:has-[:checked]:text-white">
+<span class="truncate">30D</span>
+<input checked="" class="invisible w-0" name="time-filter" type="radio" value="30D"/>
+</label>
+<label class="flex h-full flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg px-2 text-sm font-medium leading-normal text-slate-500 dark:text-[#92a9c9] has-[:checked]:bg-white has-[:checked]:text-slate-900 has-[:checked]:shadow-sm dark:has-[:checked]:bg-[#111822] dark:has-[:checked]:text-white">
+<span class="truncate">All Time</span>
+<input class="invisible w-0" name="time-filter" type="radio" value="All Time"/>
+</label>
+</div>
+<div class="overflow-hidden rounded-xl bg-white dark:bg-[#111822]">
+<div class="p-4 pb-0">
+<h2 class="text-[28px] font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Current Streak</h2>
+<p class="text-base font-normal leading-normal text-slate-500 dark:text-slate-400">15 Days</p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-6 px-4 pb-4">
+<div class="flex min-w-72 max-w-[336px] flex-1 flex-col gap-0.5">
+<div class="flex items-center justify-between p-1">
+<button class="text-slate-800 dark:text-white">
+<div class="flex size-10 items-center justify-center">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</div>
+</button>
+<p class="flex-1 text-center text-base font-bold leading-tight text-slate-900 dark:text-white">October 2023</p>
+<button class="text-slate-800 dark:text-white">
+<div class="flex size-10 items-center justify-center">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</div>
+</button>
+</div>
+<div class="grid grid-cols-7">
+<p class="flex h-12 w-full items-center justify-center pb-0.5 text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">S</p>
+<p class="flex h-12 w-full items-center justify-center pb-0.5 text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">M</p>
+<p class="flex h-12 w-full items-center justify-center pb-0.5 text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">T</p>
+<p class="flex h-12 w-full items-center justify-center pb-0.5 text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">W</p>
+<p class="flex h-12 w-full items-center justify-center pb-0.5 text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">T</p>
+<p class="flex h-12 w-full items-center justify-center pb-0.5 text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">F</p>
+<p class="flex h-12 w-full items-center justify-center pb-0.5 text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">S</p>
+<button class="col-start-1 h-12 w-full text-sm font-medium leading-normal text-slate-400 dark:text-slate-500"><div class="flex size-full items-center justify-center rounded-full">1</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">2</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">3</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">4</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">5</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">6</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">7</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="relative flex size-full items-center justify-center rounded-full bg-primary">8<div class="absolute bottom-1.5 h-1.5 w-1.5 rounded-full bg-orange-400"></div></div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">9</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="relative flex size-full items-center justify-center rounded-full bg-primary">10<div class="absolute bottom-1.5 h-1.5 w-1.5 rounded-full bg-orange-400"></div></div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">11</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">12</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="relative flex size-full items-center justify-center rounded-full bg-primary">13<div class="absolute bottom-1.5 h-1.5 w-1.5 rounded-full bg-orange-400"></div></div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">14</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="relative flex size-full items-center justify-center rounded-full bg-primary">15<div class="absolute bottom-1.5 h-1.5 w-1.5 rounded-full bg-orange-400"></div></div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-white"><div class="flex size-full items-center justify-center rounded-full bg-primary">16</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">17</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">18</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">19</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">20</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">21</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">22</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">23</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">24</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">25</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">26</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">27</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">28</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-12 w-full text-sm font-medium leading-normal text-slate-800 dark:text-white"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-200 p-4 dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded-full bg-primary"></div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300">Daily Goal Met</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded-full bg-orange-400"></div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300">Reading Exercise</span>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-white p-4 dark:bg-[#111822]">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Reading Comprehension</h3>
+<div class="mt-4 flex flex-col items-center gap-6 sm:flex-row">
+<div class="relative flex h-40 w-40 items-center justify-center">
+<svg class="h-full w-full -rotate-90" viewBox="0 0 36 36">
+<circle class="stroke-current text-slate-200 dark:text-slate-700" cx="18" cy="18" fill="none" r="15.9155" stroke-width="4"></circle>
+<circle class="stroke-current text-orange-400" cx="18" cy="18" fill="none" r="15.9155" stroke-dasharray="85, 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">85%</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Avg. Score</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/50">
+<span class="material-symbols-outlined text-orange-500 dark:text-orange-400">article</span>
+</div>
+<div>
+<p class="font-medium text-slate-800 dark:text-white">Articles Read</p>
+<p class="text-sm font-bold text-slate-500 dark:text-slate-400">24</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50">
+<span class="material-symbols-outlined text-green-500 dark:text-green-400">check_circle</span>
+</div>
+<div>
+<p class="font-medium text-slate-800 dark:text-white">Correct Answers</p>
+<p class="text-sm font-bold text-slate-500 dark:text-slate-400">102</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-white p-4 dark:bg-[#111822]">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Pronunciation Score Trend</h3>
+<div class="mt-4 h-48">
+<svg height="100%" preserveAspectRatio="none" viewBox="0 0 300 120" width="100%">
+<line class="dark:stroke-gray-700" stroke="#E5E7EB" stroke-dasharray="2" stroke-width="1" x1="0" x2="0" y1="0" y2="100"></line>
+<line class="dark:stroke-gray-700" stroke="#E5E7EB" stroke-dasharray="2" stroke-width="1" x1="0" x2="300" y1="25" y2="25"></line>
+<line class="dark:stroke-gray-700" stroke="#E5E7EB" stroke-dasharray="2" stroke-width="1" x1="0" x2="300" y1="50" y2="50"></line>
+<line class="dark:stroke-gray-700" stroke="#E5E7EB" stroke-dasharray="2" stroke-width="1" x1="0" x2="300" y1="75" y2="75"></line>
+<line class="dark:stroke-gray-700" stroke="#E5E7EB" stroke-width="1" x1="0" x2="300" y1="100" y2="100"></line>
+<text class="fill-current text-slate-500 dark:text-slate-400" font-family="Lexend" font-size="10" x="0" y="115">Sep 20</text>
+<text class="fill-current text-slate-500 dark:text-slate-400" font-family="Lexend" font-size="10" text-anchor="middle" x="135" y="115">Oct 5</text>
+<text class="fill-current text-slate-500 dark:text-slate-400" font-family="Lexend" font-size="10" text-anchor="end" x="280" y="115">Oct 20</text>
+<polyline fill="none" points="20,80 60,60 100,70 140,50 180,40 220,55 260,30" stroke="#136dec" stroke-width="2"></polyline>
+<circle class="dark:stroke-[#111822]" cx="260" cy="30" fill="#136dec" r="4" stroke="white" stroke-width="2"></circle>
+</svg>
+</div>
+</div>
+<div class="rounded-xl bg-white p-4 dark:bg-[#111822]">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Vocabulary Depth</h3>
+<div class="mt-4 flex flex-col items-center gap-6 sm:flex-row">
+<div class="relative flex h-40 w-40 items-center justify-center">
+<svg class="h-full w-full" viewBox="0 0 36 36">
+<path class="stroke-current text-green-500" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="75, 100" stroke-width="4"></path>
+<path class="stroke-current text-slate-200 dark:text-slate-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="100, 100" stroke-dashoffset="-25" stroke-width="4"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">75%</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Known</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded-full bg-green-500"></div>
+<div>
+<p class="font-medium text-slate-800 dark:text-white">Known Meanings</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">1,230 words</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+<div>
+<p class="font-medium text-slate-800 dark:text-white">Unknown Meanings</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">410 words</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-xl bg-white p-4 dark:bg-[#111822]">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Words Learned</p>
+<p class="mt-1 text-2xl font-bold text-slate-900 dark:text-white">1,640</p>
+</div>
+<div class="rounded-xl bg-white p-4 dark:bg-[#111822]">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Avg. Session Time</p>
+<p class="mt-1 text-2xl font-bold text-slate-900 dark:text-white">12m</p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

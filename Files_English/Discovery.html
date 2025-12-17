@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discovery View Enhanced</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1A237E",
+            "accent": "#FFCA28",
+            "background-light": "#F8F9FA",
+            "background-dark": "#101822",
+            "text-light": "#343A40",
+            "text-dark": "#F8F9FA",
+            "text-secondary-light": "#6c757d",
+            "text-secondary-dark": "#92a9c9",
+            "card-light": "#FFFFFF",
+            "card-dark": "#192433",
+            "skeleton-light": "#e2e8f0",
+            "skeleton-dark": "#1f2d41",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+          keyframes: {
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(100%)' },
+            },
+          },
+          animation: {
+            shimmer: 'shimmer 1.5s infinite',
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex-grow pb-28">
+<header class="pt-8 px-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="p-2 -ml-2 text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-text-light dark:text-text-dark tracking-tight text-[32px] font-bold leading-tight">ephemeral</h1>
+</div>
+<button class="p-2 text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">volume_up</span>
+</button>
+</div>
+</header>
+<div class="px-4 py-3 sticky top-0 bg-background-light dark:bg-background-dark z-10">
+<label class="flex flex-col min-w-40 h-14 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm bg-card-light dark:bg-card-dark border border-gray-200 dark:border-gray-700">
+<div class="text-text-secondary-light dark:text-text-secondary-dark flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-text-secondary-light placeholder:dark:text-text-secondary-dark px-2 text-base font-normal leading-normal" placeholder="Type a word to reveal its meanings." value="ephemeral"/>
+</div>
+</label>
+</div>
+<section class="mt-2">
+<div class="px-4">
+<div class="relative">
+<div class="aspect-video w-full overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
+<img alt="Cherry blossoms in bloom, symbolizing something ephemeral." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB10t5og1KFvAWgjHBK98NpQXVfXJG2X8N05CFLVzpg47U2okVFfAEDNKKSFz5DT6kE02T_6DewhQZs2sFXpNxeUBXCV_7zMxKUt89kPn1UzTh-YF5tlK4VfCkB-XUY7UKZCOXtKbDZJBNdoOIFHZMW1T2tQnca7e-0rSv1nbgi-4NDESbPsypZRBZcRliqPRpvbVFaWy7Fvmt3sPVpbe9LSJYWCejOxgI3mpb2osWVnwpxwuEoE4oATVloMlLAv1VC5WyiczcNHiut"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="p-4 bg-white/30 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined text-white !text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<button class="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-white/50 dark:bg-black/50 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-white/50 dark:bg-black/50 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-6 px-4">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-5 shadow-sm border border-gray-200 dark:border-gray-700">
+<h2 class="text-xl font-bold tracking-tight">Vocabulary Analysis</h2>
+<div class="mt-4 space-y-4">
+<div>
+<h3 class="font-semibold text-text-secondary-light dark:text-text-secondary-dark text-sm uppercase tracking-wider">Synonyms</h3>
+<p class="text-base mt-1">transitory, fleeting, momentary, transient</p>
+</div>
+<div>
+<h3 class="font-semibold text-text-secondary-light dark:text-text-secondary-dark text-sm uppercase tracking-wider">Antonyms</h3>
+<p class="text-base mt-1">permanent, enduring, everlasting, eternal</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-6 px-4">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-5 shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex justify-between items-center">
+<h2 class="text-xl font-bold tracking-tight">Example Sentence</h2>
+<button class="flex items-center gap-2 text-primary dark:text-blue-300 rounded-full px-3 py-1.5 -mr-2 text-sm bg-primary/10 dark:bg-blue-300/10">
+<span class="material-symbols-outlined !text-base">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<div class="mt-4 text-base leading-relaxed text-text-secondary-light dark:text-text-secondary-dark">
+    "The beauty of the cherry blossoms is <span class="bg-accent/20 dark:bg-accent/30 text-text-light dark:text-text-dark font-medium px-1.5 py-0.5 rounded-md">ephemeral</span>, lasting for only a few weeks each spring."
+</div>
+</div>
+</section>
+</div>
+<nav class="fixed bottom-0 left-0 right-0 h-24 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-lg border-t border-gray-200 dark:border-gray-700">
+<div class="flex h-full items-start justify-around pt-3">
+<div class="flex flex-col items-center gap-1 text-primary dark:text-blue-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 500;">search</span>
+<p class="text-xs font-semibold">Discovery</p>
+</div>
+<div class="flex flex-col items-center gap-1 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined">bookmarks</span>
+<p class="text-xs font-medium">Saved Words</p>
+</div>
+<div class="flex flex-col items-center gap-1 text-text-secondary-light dark:text-text-secondary-dark">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium">Profile</p>
+</div>
+</div>
+</nav>
+</div>
+
+</body></html>

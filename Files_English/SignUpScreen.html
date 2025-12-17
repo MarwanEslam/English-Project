@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VocabTube Sign Up</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "primary-dark": "#0b5bcc",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "surface-dark": "#1e293b",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -10px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 20px rgba(19, 109, 236, 0.3)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white">
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+<div class="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] rounded-full bg-primary/5 blur-3xl"></div>
+<div class="absolute top-[40%] -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-400/5 blur-3xl"></div>
+</div>
+<div class="relative z-10 flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto p-6 justify-center">
+<div class="flex items-center w-full pb-8 justify-between px-2">
+<button class="group flex items-center justify-center w-10 h-10 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-full hover:border-primary dark:hover:border-primary transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-slate-600 dark:text-slate-300 group-hover:text-primary transition-colors">arrow_back</span>
+</button>
+<div class="flex flex-col items-end">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Step 1 of 3</span>
+<div class="w-16 h-1 bg-slate-200 dark:bg-slate-700 rounded-full mt-1 overflow-hidden">
+<div class="w-1/3 h-full bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-light dark:bg-surface-dark rounded-3xl shadow-soft dark:shadow-black/40 border border-slate-100 dark:border-slate-700/50 overflow-hidden relative">
+<div class="h-32 w-full bg-primary/10 relative overflow-hidden group">
+<div class="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5th76JXLrF2Asu9Z6Fg0tVfsrDJi_4h-AGXNbk-Mi5bX1FSx8TB47YS-aDOtX8tssmVj-YMt4QUa4lcXg7bdRALhVPsM6eWFGqWWFZ51Zp6dLDJcR0PyQLMtYrP18AKPFThhy8Wmnl5LNrWZXtN30k33tzORcxC9-WVI-x3ep0ccEz5C2gkyR0Qb1VeAJoRlenpRZiJHg82wRlpXyebYfznPBCF7-2frrRPWPH9Ljpz63bzn77OijB5YaVbBHUpzHz9engOD6LH-Z')] bg-cover bg-center opacity-80 mix-blend-overlay"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-surface-light dark:to-surface-dark"></div>
+<div class="absolute bottom-8 left-8">
+<div class="w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30 text-white ring-4 ring-surface-light dark:ring-surface-dark transform transition-transform group-hover:scale-105 duration-300">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+</div>
+</div>
+<div class="px-8 pt-12 pb-8">
+<div class="mb-8">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">Join VocabTube</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Create your free account to start your deep contextual learning journey.
+                    </p>
+</div>
+<form class="flex flex-col gap-5">
+<div class="space-y-1.5">
+<label class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide ml-1">Email Address</label>
+<div class="relative group">
+<input class="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 px-4 py-3.5 pl-12 text-sm font-medium text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all" placeholder="name@example.com" type="email"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors text-[20px]">mail</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide ml-1">Password</label>
+<div class="relative group">
+<input class="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 px-4 py-3.5 pl-12 pr-12 text-sm font-medium text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all" placeholder="Create a password" type="password"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors text-[20px]">lock</span>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide ml-1">Confirm Password</label>
+<div class="relative group">
+<input class="w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 px-4 py-3.5 pl-12 text-sm font-medium text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all" placeholder="Confirm your password" type="password"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors text-[20px]">lock_reset</span>
+</div>
+</div>
+<div class="flex items-start gap-3 mt-2 px-1">
+<div class="flex items-center h-5 mt-0.5">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-offset-0 focus:ring-primary/20 bg-transparent cursor-pointer" id="terms" type="checkbox"/>
+</div>
+<label class="text-xs text-slate-500 dark:text-slate-400 leading-normal cursor-pointer select-none" for="terms">
+                            By creating an account, you agree to our <a class="text-primary hover:text-blue-600 font-medium transition-colors" href="#">Terms of Service</a> and <a class="text-primary hover:text-blue-600 font-medium transition-colors" href="#">Privacy Policy</a>.
+                        </label>
+</div>
+<button class="mt-4 w-full bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-2xl py-4 shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 group" type="button">
+<span>Create Account</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="relative flex py-2 items-center">
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700/60"></div>
+<span class="flex-shrink-0 mx-4 text-slate-400 text-[10px] uppercase font-bold tracking-widest">Or continue with</span>
+<div class="flex-grow border-t border-slate-200 dark:border-slate-700/60"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-2xl py-3.5 transition-all shadow-sm hover:shadow-md" type="button">
+<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm font-semibold text-slate-700 dark:text-white">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-2xl py-3.5 transition-all shadow-sm hover:shadow-md" type="button">
+<svg class="w-5 h-5 text-slate-900 dark:text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.05 20.28c-.98.95-2.05 2.3-3.69 2.3-1.6 0-2.14-.95-3.99-.95-1.87 0-2.45.92-4 .95-1.57.03-2.76-1.57-3.77-3.03-2.05-3.03-3.62-8.62-1.51-10.7 1.04-1.04 2.91-1.7 4.09-1.7 1.25 0 2.44.83 3.2.83.75 0 2.16-.89 3.63-.89 1.24 0 2.35.63 3.01 1.63-2.7 1.34-2.22 5.29.47 6.42-.23.63-.52 1.24-.86 1.81-.6.98-1.01 1.66-1.59 2.22h.01zM13 3.5c.67-1.16.59-3.5.59-3.5-1.66.06-3.63 1.16-4.37 2.09-.64.78-1.2 2.04-1.05 3.22 0 0 2.5.21 4.83-1.81z"></path>
+</svg>
+<span class="text-sm font-semibold text-slate-700 dark:text-white">Apple</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<div class="mt-8 text-center pb-6 z-10">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                Already have an account? 
+                <a class="text-primary hover:text-blue-600 font-semibold hover:underline decoration-2 decoration-primary/30 underline-offset-4 transition-all ml-1" href="#">Log in</a>
+</p>
+</div>
+</div>
+
+</body></html>

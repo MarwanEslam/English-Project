@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Passage Analytics for Creators</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2C5282", // deep blue from request
+              "background-light": "#f6f7f8",
+              "background-dark": "#101822",
+              "accent-teal": "#38B2AC",
+              "warning-red": "#E53E3E",
+              "info-gray": "#718096",
+              "success-green": "#38A169"
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-stone-800 dark:text-white">arrow_back_ios_new</span>
+</div>
+<h1 class="text-stone-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Passage Analytics</h1>
+<div class="flex size-12 shrink-0 items-center"></div> <!-- Spacer -->
+</div>
+<!-- Headline Text -->
+<h2 class="text-stone-900 dark:text-white tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5">The Impact of the Printing Press</h2>
+<!-- Segmented Buttons -->
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-stone-200 dark:bg-stone-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light has-[:checked]:dark:bg-background-dark has-[:checked]:shadow-[0_1px_3px_rgba(0,0,0,0.1)] has-[:checked]:text-primary dark:has-[:checked]:text-white text-stone-600 dark:text-stone-400 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">Overview</span>
+<input checked="" class="invisible w-0" name="analytics-tab" type="radio" value="Overview"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light has-[:checked]:dark:bg-background-dark has-[:checked]:shadow-[0_1px_3px_rgba(0,0,0,0.1)] has-[:checked]:text-primary dark:has-[:checked]:text-white text-stone-600 dark:text-stone-400 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">Students</span>
+<input class="invisible w-0" name="analytics-tab" type="radio" value="Students"/>
+</label>
+</div>
+</div>
+<div class="px-4 py-3 space-y-6">
+<!-- Overview Section -->
+<!-- Stats -->
+<div class="flex flex-wrap gap-4">
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-stone-900 p-4 border border-stone-200 dark:border-stone-800">
+<p class="text-stone-600 dark:text-stone-400 text-base font-medium leading-normal">Average Score</p>
+<p class="text-stone-900 dark:text-white tracking-light text-3xl font-bold leading-tight">72%</p>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-stone-900 p-4 border border-stone-200 dark:border-stone-800">
+<p class="text-stone-600 dark:text-stone-400 text-base font-medium leading-normal">Submissions</p>
+<p class="text-stone-900 dark:text-white tracking-light text-3xl font-bold leading-tight">25</p>
+</div>
+</div>
+<!-- Charts -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-stone-900 p-4 border border-stone-200 dark:border-stone-800">
+<p class="text-stone-900 dark:text-white text-lg font-bold leading-normal">Most Missed Questions</p>
+<div class="space-y-4">
+<!-- Chart Item 1 -->
+<div class="flex items-center gap-4">
+<p class="w-20 text-stone-600 dark:text-stone-400 text-sm font-medium">Question 3</p>
+<div class="flex-1 bg-stone-200 dark:bg-stone-800 rounded-full h-4 overflow-hidden">
+<div class="bg-warning-red h-full rounded-full" style="width: 80%;"></div>
+</div>
+<p class="w-12 text-right text-warning-red text-sm font-semibold">80%</p>
+</div>
+<!-- Chart Item 2 -->
+<div class="flex items-center gap-4">
+<p class="w-20 text-stone-600 dark:text-stone-400 text-sm font-medium">Question 5</p>
+<div class="flex-1 bg-stone-200 dark:bg-stone-800 rounded-full h-4 overflow-hidden">
+<div class="bg-warning-red h-full rounded-full" style="width: 65%;"></div>
+</div>
+<p class="w-12 text-right text-warning-red text-sm font-semibold">65%</p>
+</div>
+<!-- Chart Item 3 -->
+<div class="flex items-center gap-4">
+<p class="w-20 text-stone-600 dark:text-stone-400 text-sm font-medium">Question 1</p>
+<div class="flex-1 bg-stone-200 dark:bg-stone-800 rounded-full h-4 overflow-hidden">
+<div class="bg-warning-red/70 h-full rounded-full" style="width: 42%;"></div>
+</div>
+<p class="w-12 text-right text-warning-red/70 text-sm font-semibold">42%</p>
+</div>
+</div>
+</div>
+<!-- Student List Section (concept) -->
+<div class="flex flex-col gap-4">
+<h3 class="text-stone-900 dark:text-white text-lg font-bold leading-normal pt-4">Student Submissions (25)</h3>
+<!-- Student Card 1 -->
+<div class="flex items-center gap-4 rounded-xl bg-white dark:bg-stone-900 p-4 border border-stone-200 dark:border-stone-800 cursor-pointer">
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of a male student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU9T1PVp6UUqlU-Bzj5nz3Be95ija9gxvUfUC4qSRjG7kvs28UgWXOBffjcSwE25dlKhw2I1XOsZpd4c79eW1gZ8r-k4vxJZCswf6bsq-Sx7nVnDPgweAQkt2is92SWVSJtokw6vxGw65_trWjp_gPsQfevFcRgAMGfBXG3DVSWt9TgAnYvCLT3iC6U4qf4ffhXfYPXpQT4GYkgRAG78QtJr3YxaJT3GgEenqPT7lBXfJaczCiDTFKEbiDyboPEkvhCbs7J07swsZY"/>
+<div class="flex-1">
+<p class="font-bold text-stone-900 dark:text-white">Liam Johnson</p>
+<p class="text-sm text-info-gray">Submitted Oct 26</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-lg text-success-green">9/10</p>
+<p class="text-sm text-info-gray">90%</p>
+</div>
+</div>
+<!-- Student Card 2 -->
+<div class="flex items-center gap-4 rounded-xl bg-white dark:bg-stone-900 p-4 border border-stone-200 dark:border-stone-800 cursor-pointer">
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of a female student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATyftqqsON9GSk3cRJVzbU3sTpWT6GfyyKIEUMm8KIDvGSCl-TZcUmWu2yqAlp4wtqyjWiCHbj3VA0hllGOS51qkeKE1ITrbwp_2uSva-pVIrfKI0Qd3rAgYzUdRBN0sRMV7o0G-ibd9AY9bXsW0G8kSUqaEdwu4UJ5IAKdN21XOAN8sXrOFIDDympPhClaaaVefgL1oog6uGeBr5RuXm2wURFm5JmicSLXVb5ToC4jNn9R-zZAKfK9sGDy7oeV7iBOhYSGS0e5rDY"/>
+<div class="flex-1">
+<p class="font-bold text-stone-900 dark:text-white">Olivia Smith</p>
+<p class="text-sm text-info-gray">Submitted Oct 26</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-lg text-yellow-500">7/10</p>
+<p class="text-sm text-info-gray">70%</p>
+</div>
+</div>
+<!-- Student Card 3 -->
+<div class="flex items-center gap-4 rounded-xl bg-white dark:bg-stone-900 p-4 border border-stone-200 dark:border-stone-800 cursor-pointer">
+<img class="h-12 w-12 rounded-full object-cover" data-alt="Profile picture of another female student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkRqZquzBeLQLqSUqtRj6WRg3cbnAbVyOA6gUUp5-EDmCQkFMjZ2jrboopl093KMbDlcZViIMleDpuZU8ThiVWSklFH36Y3ezekaP2a6Ln5v6qfq-LZHs1b-Gjk_CPNYQiA9E12ohawSyxyZA-GWPN2ieNtA5tvBwMCV1CaXyY4O7mvuNo3hRbBki4_YOoXSlQzMIYwWmpSZPBZrhNiXiuxE82JVC4m6MFsAonV4t0nH7Zi8k7bLrcpBX-9XOdARM4iscND00MogmY"/>
+<div class="flex-1">
+<p class="font-bold text-stone-900 dark:text-white">Emma Williams</p>
+<p class="text-sm text-info-gray">Submitted Oct 25</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-lg text-warning-red">4/10</p>
+<p class="text-sm text-info-gray">40%</p>
+</div>
+</div>
+<!-- Student Card 4 -->
+<div class="flex items-center gap-4 rounded-xl bg-white dark:bg-stone-900 p-4 border border-stone-200 dark:border-stone-800 cursor-pointer">
+<div class="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
+<span class="text-white text-xl font-bold">NB</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-stone-900 dark:text-white">Noah Brown</p>
+<p class="text-sm text-info-gray">Submitted Oct 25</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-lg text-success-green">10/10</p>
+<p class="text-sm text-info-gray">100%</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-12"></div>
+</div>
+</body></html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col font-display dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center" data-icon="Placeholder" data-size="24px" data-weight="regular"></div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Profile</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-slate-900 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</div>
+</div>
+<!-- Profile Header -->
+<div class="flex p-4 @container">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32" data-alt="User's profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCY5mp_RGngsN6FyGVL9kbbnXFqj20NztxyDyk63x5Ob86nkjSa6dW9khjwTt7axnfiCOTcmhKseKVuQz8uGWwgnB_87BjUsJIdrasyO6tiZRmbcgcehZcio-vId73wL1GzrS8mBM3oymWbzglm3vUV19P55cMGH7lgaMH7CZF-ClG_PEGrxB034JpD-CWVG4h6RSWDm1qb8tfLP2Koyasminu0C1lkZmU4iJNca7ZDTIOO_h9zCIV9zHrIgApojH_Wu9C58Fef7s2Q");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Alex Linderson</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal text-center">@alexlinderson</p>
+</div>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-orange-400/20 text-orange-400 text-sm font-bold leading-normal tracking-[0.015em] w-auto">
+<span class="truncate">🔥 5 Day Streak</span>
+</button>
+</div>
+</div>
+<!-- Segmented Buttons -->
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-slate-900 dark:has-[:checked]:text-white text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">
+<span class="truncate">English</span>
+<input checked="" class="invisible w-0" name="language-toggle" type="radio" value="English"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-slate-900 dark:has-[:checked]:text-white text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">
+<span class="truncate">Spanish</span>
+<input class="invisible w-0" name="language-toggle" type="radio" value="Spanish"/>
+</label>
+</div>
+</div>
+<!-- Section Header: My Progress -->
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">My Progress</h3>
+<!-- Card: Words Learned -->
+<div class="px-4 pb-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-sm bg-white dark:bg-slate-800/50 p-4">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">translate</span>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Vocabulary</p>
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Words Learned</p>
+</div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal pt-2">You've mastered 1,200 words. Keep it up!</p>
+<div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mt-1">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Videos Completed -->
+<div class="px-4 pb-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-sm bg-white dark:bg-slate-800/50 p-4">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Engagement</p>
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Videos Completed</p>
+</div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal pt-2">You have watched 85 videos so far.</p>
+<div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mt-1">
+<div class="bg-primary h-2 rounded-full" style="width: 50%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Header: Achievements -->
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-4">Achievements</h3>
+<!-- Achievements Grid -->
+<div class="px-4 pb-4">
+<div class="grid grid-cols-3 gap-4 text-center">
+<!-- Achievement 1 -->
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-200 dark:bg-slate-800/50">
+<span class="text-3xl">🏆</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-xs font-medium leading-normal">Word Wizard</p>
+</div>
+<!-- Achievement 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-200 dark:bg-slate-800/50">
+<span class="text-3xl">🔥</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-xs font-medium leading-normal">10-Day Streak</p>
+</div>
+<!-- Achievement 3 -->
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-200 dark:bg-slate-800/50">
+<span class="text-3xl">🎯</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-xs font-medium leading-normal">First 100 Words</p>
+</div>
+<!-- Achievement 4 -->
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-200 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-slate-400 dark:text-slate-500">lock</span>
+</div>
+<p class="text-slate-500 dark:text-slate-500 text-xs font-medium leading-normal">Video Marathon</p>
+</div>
+<!-- Achievement 5 -->
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-200 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-slate-400 dark:text-slate-500">lock</span>
+</div>
+<p class="text-slate-500 dark:text-slate-500 text-xs font-medium leading-normal">Perfect Week</p>
+</div>
+<!-- Achievement 6 -->
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="flex items-center justify-center size-16 rounded-full bg-slate-200 dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-4xl text-slate-400 dark:text-slate-500">lock</span>
+</div>
+<p class="text-slate-500 dark:text-slate-500 text-xs font-medium leading-normal">Polyglot</p>
+</div>
+</div>
+</div>
+<div class="h-10"></div>
+</div>
+</body></html>
